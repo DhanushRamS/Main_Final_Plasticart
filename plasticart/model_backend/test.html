@@ -1,0 +1,16 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload Form</title>
+</head>
+<body>
+    <form enctype="multipart/form-data" action="http://127.0.0.1:5000/upload" method="post">
+        <label for="image">Select an image:</label>
+        <input type="file" id="image" name="image">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

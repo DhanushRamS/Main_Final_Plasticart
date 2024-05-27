@@ -1,0 +1,99 @@
+/* VendorAuth.module.css */
+.vendorAuthContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+  }
+
+  .vendorAuthBox {
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .vendorAuthBox h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+  }
+
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+
+  .forlabel {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .forinput {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #000 !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000 !important;
+  }
+  .tands{
+    display: flex;
+    flex-direction: row;
+    color: #333;
+  }
+
+  .terms {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .terms label {
+    margin-left: 4rem;
+  }
+
+  .authButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .authButton:hover {
+    background-color: #0056b3;
+  }
+
+  .error {
+    color: red;
+    text-align: center;
+  }
+
+  .success {
+    color: green;
+    text-align: center;
+  }
+
+  .toggleText {
+    margin-top: 1rem;
+    text-align: center;
+    color: #555;
+    font-size: small;
+  }
+
+  .toggleText span {
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  .toggleText span:hover {
+    text-decoration: underline;
+  }

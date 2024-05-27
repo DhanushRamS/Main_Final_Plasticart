@@ -1,0 +1,52 @@
+.picknh{
+  display: flex;
+  align-items: center;
+}
+
+.notifications {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    left: 350px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+  }
+
+  .pickupItem {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .pickupImage {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .acceptButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 40px;
+    margin-top: 10px;
+  }
+
+  .rejectButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    left: 80px;
+  }

@@ -1,0 +1,327 @@
+/* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* Set up the background and font for Scanner component */
+  .scannerRoot {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('../img/scannerimg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Styling for the main container */
+  .scannerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay to ensure readability */
+  }
+
+  /* Header styles */
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333; /* Darken header background */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 15px;
+    animation: slide-down 0.5s ease-out forwards;
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Button styles */
+  .redeemButton {
+    padding: 10px 20px;
+    background-color: #ff7b00;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .redeemButton:hover {
+    background-color: #ff5c00;
+    transform: translateY(-2px);
+  }
+
+  /* Main content container */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Video container */
+  .cameraVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+
+  /* Snapshot container */
+  .cameraSnapshot {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    min-height: 600px;
+    overflow-y: auto;
+  }
+
+  /* Points display */
+  .points {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .points .coin-icon {
+    margin-right: 8px;
+    color: #ffc107;
+    font-size: 1.5rem;
+  }
+
+  /* Video styling */
+  video {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    flex-grow: 0;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Camera button */
+  .scnbutton {
+    width: 60px;
+    height: 60px;
+    background: url('camera-snap-black.svg') no-repeat center center, linear-gradient(45deg, #ff416c, #ff4b2b);
+    background-size: 60%;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .scnbutton:hover {
+    transform: scale(1.1);
+  }
+
+  /* Custom scrollbar for snapshot container */
+  .cameraSnapshot::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .cameraSnapshot::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .cameraSnapshot::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Scrollable container */
+  .scrollableContainer {
+    width: 100%;
+    height: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .scrollableContainer::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollableContainer::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollableContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Image container */
+  .imageContainer {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .imageContainer:hover {
+    transform: translateY(-5px);
+    background-color: #444;
+  }
+
+  /* Styling for captured and gallery images */
+  .capturedImage, .galleryImage {
+    width: 224px;
+    height: 160px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+
+  .capturedImage:hover, .galleryImage:hover {
+    transform: scale(1.05);
+  }
+
+  /* Modal styling */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px; /* Adjust the width as needed */
+  }
+
+  .modalImage {
+    width: 320px; /* Adjust the width as needed */
+    height: 240px; /* Adjust the height as needed */
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .modalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px; /* Adjust the width as needed */
+  }
+
+  .modalImage {
+    width: 320px; /* Adjust the width as needed */
+    height: 240px; /* Adjust the height as needed */
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #444;
+    color: #e0e0e0;
+  }
+
+  .scannerContainer button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .scannerContainer button:first-of-type {
+    background-color: #dc3545;
+    color: #fff;
+  }
+
+  .scannerContainer button:first-of-type:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+  }
+
+  .scannerContainer button:last-of-type {
+    background-color: #17a2b8;
+    color: #fff;
+  }
+
+  .scannerContainer button:last-of-type:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+  }

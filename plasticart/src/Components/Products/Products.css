@@ -1,0 +1,31 @@
+.productsCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Adjust gap between product cards */
+  justify-content: space-around; /* Adjust alignment */
+  background-color: rgb(169 255 255);
+
+}
+
+.card1, .card2,.card3,.card4,.card5,.card6 {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 8px;
+  background-color: rgb(255 253 245 / 34%);
+
+}
+
+img {
+  border-radius: 8px 8px 0 0;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+}
+p{
+  text-align: center;
+  font-size: larger;
+}
